@@ -10,7 +10,12 @@ export default {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        font: "var(--font)",
+        fontPolaroid: "var(--fontPolaroid)",
+        pink: "var(--pink)",
+        button: "var(--button)",
+        buttonHover: "var(--buttonHover)",
+        polaroid: "var(--polaroid)",
       },
     },
   },
