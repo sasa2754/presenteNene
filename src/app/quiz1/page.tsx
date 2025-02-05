@@ -6,8 +6,9 @@ import fotinho2 from "../../../public/foto3.jpg";
 import fotinho3 from "../../../public/foto4.jpg";
 import fotinho4 from "../../../public/foto5.jpg";
 import fotinho5 from "../../../public/foto6.jpg";
-import fotinho6 from "../../../public/foto7.jpg";
+// import fotinho6 from "../../../public/foto7.jpg";
 
+import fotinho0_5 from "../../../public/foto0-5.png";
 import fotinho1_5 from "../../../public/foto1-5.jpg";
 import fotinho2_5 from "../../../public/foto2-5.jpg";
 import fotinho3_5 from "../../../public/foto3-5.jpg";
@@ -33,8 +34,8 @@ export default function Quiz() {
 
   const images = [fotinho1, fotinho2, fotinho3, fotinho4, fotinho5];
   const texts = ["Aiai se você não souber essa hein", "Foi tão bom...(Sqn) Ainda bem que a gente melhorou né? ^3^", "Foi tão fofo, saudades (^///^)", "Te representa bem o seu apelido", "O jogo do caos, mas a gente é mt foda ^o^"];
-  const finalImages = [fotinho1_5, fotinho2_5, fotinho3_5, fotinho4_5, fotinho5_5];
-  const finalTexts = ["COMO ASSIM?! VOCÊ NÃO ME AMA?", "Fez de propósito, não é possível!", "Ta maomeno né, joga dnv ai!", "Acho que você leu alguma errado!", "PARABÉNS MOMOI, MERECE BESINHO!"];
+  const finalImages = [fotinho0_5, fotinho1_5, fotinho2_5, fotinho3_5, fotinho4_5, fotinho5_5];
+  const finalTexts = ["EU VOU EMBORA, VOCÊ ME ODEIAAAAA!","COMO ASSIM?! VOCÊ NÃO ME AMA?", "Fez de propósito, não é possível!", "Ta maomeno né, joga dnv ai!", "Acho que você leu alguma errado!", "PARABÉNS MOMOI, MERECE BESINHO!"];
 
   const handleAnswerClick = (answer: string) => {
     if (answer === questions[questionIndex].correctAnswer) {
@@ -53,7 +54,8 @@ export default function Quiz() {
               <button onClick={() => router.push('/')} className="bg-button text-font shadow-lg hover:bg-buttonHover transition-colors duration-300 rounded">Voltar</button>
             </div>
             <div>
-              <Polaroid image={finalImages[correctAnswers - 1]} text={finalTexts[correctAnswers - 1]} />
+                {correctAnswers == 0 ? (<Polaroid image={finalImages[0]} text={finalTexts[correctAnswers - 1]} />) : <Polaroid image={finalImages[correctAnswers - 1]} text={finalTexts[correctAnswers - 1]} />}
+              
             </div>
           </div>
         </div>
