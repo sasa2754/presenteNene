@@ -54,7 +54,7 @@ export default function Quiz() {
               <button onClick={() => router.push('/')} className="bg-button text-font shadow-lg hover:bg-buttonHover transition-colors duration-300 rounded">Voltar</button>
             </div>
             <div>
-                {correctAnswers == 0 ? (<Polaroid image={finalImages[0]} text={finalTexts[correctAnswers - 1]} />) : <Polaroid image={finalImages[correctAnswers - 1]} text={finalTexts[correctAnswers - 1]} />}
+                <Polaroid image={finalImages[correctAnswers]} text={finalTexts[correctAnswers]} />
               
             </div>
           </div>
